@@ -17,7 +17,7 @@ export default function App() {
     <ThemeProvider>
       <I18nProvider>
         <AuthProvider>
-          <BrowserRouter basename="/base">
+          <BrowserRouter basename="/skyff-ai">
             <Routes>
               <Route element={<MainLayout />}>
                 <Route path="/" element={<HomePage />} />
