@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { Sparkles, Sun, Moon, Languages, Search, Users, History } from "lucide-react";
+import { Sparkles, Sun, Moon, Languages, Search, Users, History, HelpCircle } from "lucide-react";
 import { useTheme } from "@/lib/theme";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { useAuth } from "@/lib/auth";
@@ -88,6 +88,28 @@ export function Sidebar() {
           <Button variant="ghost" size="icon-sm" onClick={toggle} aria-label="Toggle theme">
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon-sm" aria-label="Help & Resources">
+                <HelpCircle className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" side="right" className="min-w-[180px]">
+              <DropdownMenuItem asChild>
+                <Link to="/help">Help Center</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/releases">Release Notes</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/terms">Terms of Service</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/privacy">Privacy Policy</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {isAuthenticated && user ? (

@@ -8,6 +8,10 @@ import { ResultsPage } from "@/pages/ResultsPage";
 import { ProviderDetailPage } from "@/pages/ProviderDetailPage";
 import { BookingPage } from "@/pages/BookingPage";
 import { DashboardPage } from "@/pages/DashboardPage";
+import { HelpPage } from "@/pages/HelpPage";
+import { ReleasesPage } from "@/pages/ReleasesPage";
+import { TermsPage } from "@/pages/TermsPage";
+import { PrivacyPage } from "@/pages/PrivacyPage";
 import { ThemeProvider } from "@/lib/theme";
 import { I18nProvider } from "@/lib/i18n";
 import { AuthProvider } from "@/lib/auth";
@@ -28,6 +32,10 @@ export default function App() {
                 <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/provider/:id" element={<ProviderDetailPage />} />
                 <Route path="/book/:id" element={<BookingPage />} />
+                <Route path="/help" element={<HelpPage />} />
+                <Route path="/releases" element={<ReleasesPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Route>
             </Routes>
