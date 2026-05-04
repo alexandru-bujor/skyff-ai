@@ -1,9 +1,12 @@
+import { useI18n } from "@/lib/i18n";
+
 export function TermsPage() {
+  const { t } = useI18n();
   return (
     <div className="container max-w-3xl py-12 prose prose-slate dark:prose-invert">
-      <h1 className="text-4xl font-bold tracking-tight mb-8">Terms of Service</h1>
+      <h1 className="text-4xl font-bold tracking-tight mb-8">{t("terms.title")}</h1>
       
-      <p className="text-muted-foreground mb-8">Last updated: May 4, 2026</p>
+      <p className="text-muted-foreground mb-8">{t("legal.lastUpdated")}: May 4, 2026</p>
 
       <div className="space-y-6">
         <section>

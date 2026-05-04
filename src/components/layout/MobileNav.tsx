@@ -34,7 +34,7 @@ export function MobileNav() {
   const navLinks = [
     { to: "/", label: t("nav.explore"), icon: Search, exact: true },
     { to: "/results", label: t("nav.providers"), icon: Users },
-    { to: "/history", label: "Istoric", icon: History },
+    { to: "/history", label: t("nav.history"), icon: History },
   ];
 
   return (
@@ -119,16 +119,16 @@ export function MobileNav() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start" side="top" className="min-w-[180px]">
                   <DropdownMenuItem asChild onClick={() => setOpen(false)}>
-                    <Link to="/help">Help Center</Link>
+                    <Link to="/help">{t("nav.help")}</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild onClick={() => setOpen(false)}>
-                    <Link to="/releases">Release Notes</Link>
+                    <Link to="/releases">{t("nav.releases")}</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild onClick={() => setOpen(false)}>
-                    <Link to="/terms">Terms of Service</Link>
+                    <Link to="/terms">{t("nav.terms")}</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild onClick={() => setOpen(false)}>
-                    <Link to="/privacy">Privacy Policy</Link>
+                    <Link to="/privacy">{t("nav.privacy")}</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

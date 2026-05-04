@@ -1,10 +1,13 @@
+import { useI18n } from "@/lib/i18n";
+
 export function ReleasesPage() {
+  const { t } = useI18n();
   return (
     <div className="container max-w-3xl py-12">
       <div className="mb-8 space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">Release Notes</h1>
+        <h1 className="text-4xl font-bold tracking-tight">{t("releases.title")}</h1>
         <p className="text-lg text-muted-foreground">
-          Stay up to date with the latest features, improvements, and bug fixes.
+          {t("releases.subtitle")}
         </p>
       </div>
 

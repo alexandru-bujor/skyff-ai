@@ -27,7 +27,7 @@ export function Sidebar() {
   const navLinks = [
     { to: "/", label: t("nav.explore"), icon: Search, exact: true },
     { to: "/results", label: t("nav.providers"), icon: Users },
-    { to: "/history", label: "Istoric", icon: History },
+    { to: "/history", label: t("nav.history"), icon: History },
   ];
 
   return (
@@ -97,16 +97,16 @@ export function Sidebar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" side="right" className="min-w-[180px]">
               <DropdownMenuItem asChild>
-                <Link to="/help">Help Center</Link>
+                <Link to="/help">{t("nav.help")}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/releases">Release Notes</Link>
+                <Link to="/releases">{t("nav.releases")}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/terms">Terms of Service</Link>
+                <Link to="/terms">{t("nav.terms")}</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/privacy">Privacy Policy</Link>
+                <Link to="/privacy">{t("nav.privacy")}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
